@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МатемПлатформа</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#home" class="logo">
+      <!-- SVG логотип -->
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <!-- Треугольник -->
+        <polygon points="50,5 95,95 5,95" fill="url(#grad1)" stroke="white" stroke-width="2"/>
+        <!-- Круг -->
+        <circle cx="50" cy="50" r="20" fill="url(#grad2)" stroke="white" stroke-width="2"/>
+        <!-- Ромб -->
+        <rect x="35" y="35" width="30" height="30" transform="rotate(45 50 50)" fill="url(#grad3)" stroke="white" stroke-width="2"/>
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10b981"/>
+            <stop offset="100%" stop-color="#059669"/>
+          </linearGradient>
+          <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#22c55e"/>
+            <stop offset="100%" stop-color="#16a34a"/>
+          </linearGradient>
+          <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4ade80"/>
+            <stop offset="100%" stop-color="#22c55e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      МатемПлатформа
+    </a>
+    <ul class="menu">
+      <li><a href="#home">Главная</a></li>
+      <li><a href="#tests">Тесты</a></li>
+      <li><a href="#exercises">Упражнения</a></li>
+      <li><a href="#profile">Профиль</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Добро пожаловать на МатемПлатформу</h1>
+    <p>Интерактивная платформа для подготовки к контрольным работам по математике</p>
+    <nav class="hero-buttons">
+      <a href="#tests" class="btn-primary">Начать тест</a>
+      <a href="#exercises" class="btn-secondary">Решать упражнения</a>
+    </nav>
+  </section>
+
+  <!-- Статистика -->
+  <section class="statistics">
+    <ul class="stats-list">
+      <li class="stat-card">🎯<span>Тестов пройдено</span><p>0</p></li>
+      <li class="stat-card">📖<span>Упражнений решено</span><p>0</p></li>
+      <li class="stat-card">🏆<span>Достижения</span><p>0</p></li>
+    </ul>
+  </section>
+
+  <!-- Тесты -->
+  <section id="tests" class="cards-section">
+    <h2>Тесты</h2>
+    <ul class="cards-list">
+      <li class="card">🔢 Алгебра</li>
+      <li class="card">📐 Геометрия</li>
+      <li class="card">📊 Тригонометрия</li>
+      <li class="card">📈 Функции</li>
+      <li class="card">🎲 Вероятность</li>
+      <li class="card">🔤 Числа и действия</li>
+    </ul>
+  </section>
+
+  <!-- Упражнения -->
+  <section id="exercises" class="cards-section">
+    <h2>Упражнения</h2>
+    <ul class="cards-list">
+      <li class="card">🔢 Алгебра</li>
+      <li class="card">📐 Геометрия</li>
+      <li class="card">📊 Тригонометрия</li>
+      <li class="card">📈 Функции</li>
+      <li class="card">🎲 Вероятность</li>
+      <li class="card">🔤 Числа и действия</li>
+    </ul>
+  </section>
+
+  <!-- Профиль -->
+  <section id="profile" class="profile-page">
+    <h2>Профиль</h2>
+    <ul class="profile-stats">
+      <li>🎯 Тестов пройдено: 0</li>
+      <li>📖 Упражнений решено: 0</li>
+      <li>📈 Точность ответов: 0%</li>
+      <li>🏆 Достижения: 0</li>
+    </ul>
+    <section class="achievements">
+      <h3>Достижения</h3>
+      <ul>
+        <li>🎯 Первый тест</li>
+        <li>🔥 10 тестов</li>
+        <li>⭐ Отличник (100%)</li>
+        <li>📝 Первое упражнение</li>
+        <li>💪 20 упражнений</li>
+      </ul>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 МатемПлатформа. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
