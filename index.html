@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МатемПлатформа</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="logo">
+      <svg width="50" height="50" viewBox="0 0 100 100">
+        <polygon points="50,5 95,95 5,95" fill="url(#grad1)" stroke="white" stroke-width="2"/>
+        <circle cx="50" cy="50" r="20" fill="url(#grad2)" stroke="white" stroke-width="2"/>
+        <rect x="35" y="35" width="30" height="30" transform="rotate(45 50 50)" fill="url(#grad3)" stroke="white" stroke-width="2"/>
+        <defs>
+          <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#10b981"/>
+            <stop offset="100%" stop-color="#059669"/>
+          </linearGradient>
+          <linearGradient id="grad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#22c55e"/>
+            <stop offset="100%" stop-color="#16a34a"/>
+          </linearGradient>
+          <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#4ade80"/>
+            <stop offset="100%" stop-color="#22c55e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      МатемПлатформа
+    </a>
+    <ul class="menu">
+      <li><a href="#" onclick="showSection('home')">Главная</a></li>
+      <li><a href="#" onclick="showSection('tests')">Тесты</a></li>
+      <li><a href="#" onclick="showSection('exercises')">Упражнения</a></li>
+      <li><a href="#" onclick="showSection('profile')">Профиль</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Главная -->
+  <section id="home" class="hero">
+    <h1>Добро пожаловать на МатемПлатформу</h1>
+    <p>Интерактивная платформа для подготовки к контрольным работам по математике</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary" onclick="showSection('tests')">Начать тест</a>
+      <a href="#" class="btn-secondary" onclick="showSection('exercises')">Решать упражнения</a>
+    </div>
+  </section>
+
+  <!-- Тесты -->
+  <section id="tests" class="cards-section hidden">
+    <h2>Тесты</h2>
+    <ul class="cards-list">
+      <li class="card" onclick="openTasks('tests','algebra')">🔢 Алгебра</li>
+      <li class="card" onclick="openTasks('tests','geometry')">📐 Геометрия</li>
+      <li class="card" onclick="openTasks('tests','trigonometry')">📊 Тригонометрия</li>
+    </ul>
+  </section>
+
+  <!-- Упражнения -->
+  <section id="exercises" class="cards-section hidden">
+    <h2>Упражнения</h2>
+    <ul class="cards-list">
+      <li class="card" onclick="openTasks('exercises','algebra')">🔢 Алгебра</li>
+      <li class="card" onclick="openTasks('exercises','geometry')">📐 Геометрия</li>
+      <li class="card" onclick="openTasks('exercises','trigonometry')">📊 Тригонометрия</li>
+    </ul>
+  </section>
+
+  <!-- Задания -->
+  <section id="tasks" class="cards-section hidden">
+    <h2 id="tasksTitle"></h2>
+    <div class="card">
+      <p id="taskText"></p>
+      <input type="text" id="taskAnswer" placeholder="Введите ответ">
+      <br><br>
+      <button class="btn-primary" onclick="checkTask()">Ответить</button>
+      <p id="taskResult"></p>
+    </div>
+    <br>
+    <button class="btn-secondary" onclick="goBack()">Назад</button>
+  </section>
+
+  <!-- Профиль -->
+  <section id="profile" class="profile-page hidden">
+    <h2>Профиль</h2>
+    <ul class="profile-stats">
+      <li>🎯 Тестов пройдено: <span id="doneTasks">0</span></li>
+      <li>📖 Правильных ответов: <span id="correctAnswers">0</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 МатемПлатформа. Все права защищены.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

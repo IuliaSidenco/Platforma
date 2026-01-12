@@ -1,0 +1,186 @@
+/* Общие стили для всего документа */
+body { /* Основной контейнер страницы */
+  margin: 0; /* Убирает стандартные отступы браузера */
+  font-family: Arial, sans-serif; /* Шрифт текста */
+  background: #f0fdf4; /* Цвет фона всей страницы */
+  color: #065f46; /* Цвет текста */
+  line-height: 24px; /* Межстрочный интервал */
+}
+
+/* НАВИГАЦИЯ */
+header nav { /* Верхнее меню */
+  display: flex; /* Выравнивание по горизонтали */
+  justify-content: space-between; /* Распределяет логотип и меню по краям */
+  align-items: center; /* Вертикальное выравнивание элементов */
+  background: #22c55e; /* Цвет фона навигации */
+  padding: 10px 30px; /* Внутренние отступы сверху/снизу и слева/справа */
+  position: sticky; /* Прилипание меню к верху при прокрутке */
+  top: 0; /* Привязка к верхней границе */
+}
+
+.logo { /* Логотип сайта */
+  display: flex; /* Элементы логотипа в ряд */
+  align-items: center; /* Вертикальное выравнивание */
+  gap: 10px; /* Расстояние между иконкой и текстом */
+  font-weight: bold; /* Жирный текст */
+  font-size: 24px; /* Размер текста логотипа в пикселях */
+  color: white; /* Цвет текста */
+  text-decoration: none; /* Убирает подчеркивание ссылок */
+}
+
+.menu { /* Основное меню навигации */
+  list-style: none; /* Убирает маркеры списка */
+  display: flex; /* Расположение пунктов в ряд */
+  gap: 20px; /* Расстояние между пунктами */
+  margin: 0; /* Убирает внешние отступы */
+  padding: 0; /* Убирает внутренние отступы */
+}
+
+.menu li a { /* Стили ссылок меню */
+  color: white; /* Цвет текста */
+  text-decoration: none; /* Убирает подчеркивание */
+  font-weight: bold; /* Жирный текст */
+  padding: 8px 15px; /* Внутренние отступы */
+  border-radius: 5px; /* Скругление углов */
+}
+
+.menu li a:hover { /* При наведении на ссылку */
+  background: #16a34a; /* Цвет фона при hover */
+}
+
+/* HERO — верхняя главная секция с приветствием */
+.hero { 
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 100px 20px; /* Отступы сверху/снизу и по бокам */
+  background: linear-gradient(to bottom right, #bbf7d0, #f0fdf4); /* Градиент фона */
+}
+
+.hero h1 { /* Заголовок */
+  font-size: 48px; /* Размер шрифта */
+  margin-bottom: 20px; /* Отступ снизу */
+}
+
+.hero p { /* Подзаголовок / описание */
+  font-size: 20px; /* Размер шрифта */
+  margin-bottom: 40px; /* Отступ снизу */
+}
+
+.hero-buttons { /* Контейнер кнопок в Hero */
+  display: flex; /* Выравнивание кнопок в ряд */
+  justify-content: center; /* Центрирование */
+  gap: 20px; /* Расстояние между кнопками */
+}
+
+.btn-primary { /* Основная кнопка */
+  background: #16a34a; /* Цвет фона */
+  color: white; /* Цвет текста */
+  padding: 15px 30px; /* Отступы */
+  border-radius: 10px; /* Скругление углов */
+  font-weight: bold; /* Жирный текст */
+  text-decoration: none; /* Убирает подчеркивание */
+  cursor: pointer; /* Курсор при наведении */
+}
+
+.btn-secondary { /* Второстепенная кнопка */
+  border: 2px solid #16a34a; /* Рамка */
+  color: #16a34a; /* Цвет текста */
+  padding: 15px 30px; /* Отступы */
+  border-radius: 10px; /* Скругление углов */
+  font-weight: bold; /* Жирный текст */
+  text-decoration: none; /* Убирает подчеркивание */
+  cursor: pointer; /* Курсор при наведении */
+}
+
+/* Карточки тестов и упражнений */
+.cards-section { /* Секции с карточками */
+  padding: 50px 20px; /* Отступы сверху/снизу и по бокам */
+  background: #ecfdf5; /* Цвет фона секции */
+  text-align: center; /* Центрирование содержимого */
+}
+
+.cards-section h2 { /* Заголовок секции */
+  margin-bottom: 40px; /* Отступ снизу */
+  font-size: 32px; /* Размер шрифта */
+}
+
+.cards-list { /* Список карточек */
+  list-style: none; /* Убирает маркеры списка */
+  display: flex; /* Выравнивание карточек в ряд */
+  flex-wrap: wrap; /* Перенос на следующую строку при необходимости */
+  justify-content: center; /* Центрирование */
+  gap: 25px; /* Расстояние между карточками */
+  margin: 0; 
+  padding: 0;
+}
+
+.cards-list li.card { /* Одиночная карточка */
+  background: white; /* Цвет фона */
+  width: 180px; /* Ширина */
+  padding: 25px; /* Внутренние отступы */
+  text-align: center; /* Выравнивание текста */
+  border-radius: 15px; /* Скругление углов */
+  font-size: 18px; /* Размер текста */
+  display: flex; /* Flex контейнер для центрирования содержимого */
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+  cursor: pointer; /* Курсор указателя при наведении */
+  transition: transform 0.2s, box-shadow 0.2s; /* Плавная анимация при наведении */
+}
+
+.cards-list li.card:hover { /* Эффект при наведении на карточку */
+  transform: translateY(-5px); /* Поднимается на 5px */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Тень под карточкой */
+}
+
+/* Профиль пользователя */
+.profile-page { /* Секция профиля */
+  padding: 50px 20px; /* Отступы */
+}
+
+.profile-stats { /* Список статистики */
+  list-style: none; /* Убираем маркеры */
+  display: flex; /* В ряд */
+  flex-wrap: wrap; /* Перенос строк */
+  justify-content: center; /* Центрирование */
+  gap: 25px; /* Расстояние между элементами */
+  margin: 0 0 30px 0; /* Отступы сверху и снизу */
+  padding: 0; /* Внутренние отступы */
+}
+
+/* Подвал */
+footer { /* Нижняя часть страницы */
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 20px; /* Отступы */
+  background: #22c55e; /* Цвет фона */
+  color: white; /* Цвет текста */
+  font-weight: bold; /* Жирный текст */
+}
+
+/* Скрытые секции */
+.hidden { /* Используется для скрытия элементов */
+  display: none; /* Скрывает элемент */
+}
+
+/* Центрирование карточки задания */
+#tasks .card { /* Карточка конкретного задания */
+  max-width: 400px; /* Максимальная ширина */
+  margin: 0 auto; /* Центрирование по горизонтали */
+  text-align: center; /* Текст по центру */
+}
+
+#tasks input { /* Поле ввода ответа */
+  width: 80%; /* Ширина поля */
+  margin-top: 10px; /* Отступ сверху */
+  text-align: center; /* Выравнивание текста по центру */
+  padding: 8px; /* Внутренние отступы */
+}
+
+#tasks button { /* Кнопки в заданиях */
+  display: block; /* Блочный элемент */
+  margin: 10px auto; /* Центрирование с отступами */
+}
+
+#tasks p#taskResult { /* Текст с результатом ответа */
+  font-weight: bold; /* Жирный текст */
+  margin-top: 10px; /* Отступ сверху */
+}
