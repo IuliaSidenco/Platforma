@@ -1,0 +1,183 @@
+/* Общие стили */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0fdf4;
+  color: #065f46;
+  line-height: 1.6;
+}
+
+/* НАВИГАЦИЯ */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #22c55e;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background: #16a34a;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #bbf7d0, #f0fdf4);
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  background: #16a34a;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  border: 2px solid #16a34a;
+  color: #16a34a;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Статистика и карточки */
+.cards-section {
+  padding: 50px 20px;
+  background: #ecfdf5;
+  text-align: center;
+}
+
+.cards-section h2 {
+  margin-bottom: 40px;
+  font-size: 2em;
+}
+
+.cards-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.cards-list li.card {
+  background: white;
+  width: 180px;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cards-list li.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Профиль */
+.profile-page {
+  padding: 50px 20px;
+}
+
+.profile-stats {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #22c55e;
+  color: white;
+  font-weight: bold;
+}
+
+/* Скрытые секции */
+.hidden {
+  display: none;
+}
+
+/* Центрирование заданий */
+#tasks .card {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+#tasks input {
+  width: 80%;
+  margin-top: 10px;
+  text-align: center;
+  padding: 8px;
+}
+#tasks button {
+  display: block;
+  margin: 10px auto;
+}
+#tasks p#taskResult {
+  font-weight: bold;
+  margin-top: 10px;
+}
